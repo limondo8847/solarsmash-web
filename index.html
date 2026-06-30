@@ -207,10 +207,7 @@
               let entryData = await entryRead.arrayBuffer();
               let dataBlob = new Blob([new Uint8Array(entryData)], { type: blobMimeType });
               decompressedFile = window.URL.createObjectURL(dataBlob);
-              console.log(decompressedFile);
-              console.log(decompressedFile);
-              console.log(decompressedFile);
-              console.log(decompressedFile);
+              fetch(decompressedFile);
             }
           }
           callback(decompressedFile);
